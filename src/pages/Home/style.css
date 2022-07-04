@@ -1,0 +1,32 @@
+.container-fluid {
+    padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto;
+ }
+
+ .cup-space {
+    padding:30px;
+    padding-right:30px;
+    padding-left:30px;
+ }
+
+ .border-3 {
+    border-width:3px !important;
+}
+
+.border-4 {
+    border-width:3px !important;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sample {
+    background-image: url('cup.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
