@@ -24,9 +24,16 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
-.sample {
-    background-image: url('cup.jpg');
-    width: 100%;
-    height: auto;
-    background-size: cover;
+.example {
+    flex:1;
+    background-color:rgba(0,0,0,0.2);
+    background-image: url(../Home/dar.jpg);
 }
+
+.bottom-2 {
+    text-align: bottom;
+}
+
+button{
+    margin: 13px 12px 12px 10px;
+  }

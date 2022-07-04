@@ -27,8 +27,13 @@ const Home = () => {
 									software development. These days have been amazing, and I will continue
 									to grind my skills to further my knowledge <br></br> at coding.
 								</p>
+
+								<div class="d-grid gap-2 d-md-flex">
 								<a href="https://drive.google.com/file/d/1-8UKcrTY9kWmrUrrwTCNyeJAEJSdzhkG/view?usp=sharing" 
 								class="text-center btn btn-outline-dark btn-lg btn-block">Resume</a>
+								<a href="https://github.com/Alfredoxrock" 
+								class="text-center btn btn-outline-dark btn-lg btn-block">MyGithub</a>
+								</div>
 							</div>
 
 							<div class="col-md-6 d-none d-sm-none d-md-block">
@@ -106,9 +111,23 @@ const Home = () => {
 				</a>		
 			</header>
 
-			<header class="card-group cup-space sample">
-				
+			<header class="card-group cup-space">
+				<a class="card border border-dark border-3 example text-white" href="https://github.com/Alfredoxrock/Process_scheduler">
+					
+					<div class="card-body d-flex align-content-end flex-wrap">
+					<h5 class="card-title">Process Scheduler</h5>
+					<p class="card-text">It creates tasks and stores them into a process pool, then
+					they are moved to the ready queue, the processes depending on priority move to the running 
+					queue and the program decides what processes to terminate.
+					Finally, it Shows the computer total time when all the tasks are terminated. </p>
+					<p class="card-text"><small class="text-muted">Code available on github</small></p>
+					</div>
+				</a>
+				<div class="cup-space">  </div>
 				<a class="card border-4 border-danger" href="https://github.com/Alfredoxrock/blogportfolio">
+					
+					<img class="card-img-top" href="https://github.com/Alfredoxrock/blogportfolio" src="cup.jpg" alt="Card image cap"/>
+					
 					<div class="card-body">
 					<h5 class="card-title">This Website</h5>
 					<p class="card-text">Implemented Bootstrap, CSS and HTML DOM to create this website </p>
@@ -116,6 +135,8 @@ const Home = () => {
 					</div>
 				</a>		
 			</header>
+			
+			
 
 			<header class="mt-5 pt-5 text-black">
 				<div class="container">
