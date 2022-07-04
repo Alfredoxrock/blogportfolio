@@ -1,0 +1,9 @@
+.border-4 {
+    border-width:3px !important;
+}
+
+.cup-space {
+    padding:30px;
+    padding-right:30px;
+    padding-left:30px;
+ }

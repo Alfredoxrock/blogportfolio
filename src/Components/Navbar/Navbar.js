@@ -78,12 +78,6 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faHouse} /> Home
               </NavLink>
             </li>
-
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/about" exact>
-              <FontAwesomeIcon icon={faCircleInfo} /> About
-              </NavLink> 
-            </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/contact" exact>
               <FontAwesomeIcon icon={faAt} /> Contact Me
