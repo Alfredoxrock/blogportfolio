@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+	const form = useRef();
+
+	function sendEmail(e){
+		
+		e.preventDefault();
+
+		emailjs.sendForm('service_e6hl05e', 'template_5xuz1k9', form.current, 'VH6zkTxClnGFxzOAa')
+		  .then((result) => {
+			  console.log(result.text);
+		  }, (error) => {
+			  console.log(error.text);
+		  });
+		  e.target.reset();
+		  alert("Message sent");
+	}
 
 	return(
 
@@ -19,9 +36,9 @@ const Contact = () => {
 	 I'll get back to you in no time.</p>
 
     <div class="row">
-
+		
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+            <form ref={form} onSubmit={sendEmail}>
 
                
                 <div class="row cup-space">
@@ -29,14 +46,14 @@ const Contact = () => {
                  
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="name" name="name" class="form-control"/>
+                            <input type="text" name="to_name" class="form-control"/>
                             <label for="name" class="">Your name</label>
                         </div>
                     </div>
                   
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="email" name="email" class="form-control"/>
+                            <input type="email" name="from_name" class="form-control"/>
                             <label for="email" class="">Your email</label>
                         </div>
                     </div>
@@ -47,7 +64,7 @@ const Contact = () => {
                 <div class="row cup-space">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="subject" name="subject" class="form-control"/>
+                            <input type="text" name="subject" class="form-control"/>
                             <label for="subject" class="">Subject</label>
                         </div>
                     </div>
@@ -59,20 +76,24 @@ const Contact = () => {
                     <div class="col-md-12">
 
                         <div class="md-form">
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <textarea type="text" name="message" rows="2" class="form-control md-textarea"></textarea>
                             <label for="message">Your message</label>
                         </div>
 
                     </div>
                 </div>
+
+				<div class="text-center text-md-left">
+                <input class="btn btn-dark" type="submit" value="Send">
+				
+				</input>
+           		 </div>
+          		  <div class="status"></div>
               
 
             </form>
 
-            <div class="text-center text-md-left">
-                <a class="btn btn-dark" onclick="document.getElementById('contact-form').submit();">Send</a>
-            </div>
-            <div class="status"></div>
+            
         </div>
        
 
@@ -91,6 +112,8 @@ const Contact = () => {
      
 
     </div>
+
+	
 
 </section>
 
@@ -111,5 +134,7 @@ const Contact = () => {
 		)
 
 }
+
+
 
 export default Contact;

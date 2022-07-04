@@ -7,7 +7,7 @@ const Services = () => {
 			<div className="container">
 
 			<h1 className="text-center" style={{paddingTop: "30%"}}>
-				Services
+				Message sent Succesfully.
 			</h1>
 
 			</div>
